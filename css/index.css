@@ -32,8 +32,6 @@
 		text-align: center;
 		background: #2D2D2D;
 		color: white;
-		position: relative;
-		overflow: hidden;
 		-webkit-animation-name: fondo;
 		        animation-name: fondo;
 		-webkit-animation-duration: 10s;
@@ -60,6 +58,13 @@
 
 	h1 {
 		color: white;
+		position:absolute;
+		top: 5%;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    color: #C42929;
+	    font-family: sans-serif;
 		-webkit-animation-name: animacion;
 		        animation-name: animacion;
 		-webkit-animation-duration: 1s;
