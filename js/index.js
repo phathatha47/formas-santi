@@ -1,31 +1,36 @@
 		var aciertos = 0;
 
+		var aciertosObj = {
+			'rect': 0,
+			'circ': 0,
+			'semic': 0,
+			'gorro' : 0
+		};
+
 
 		var correct = document.getElementById('correct');
 		var wrong = document.getElementById('wrong');
 		var all = document.getElementById('all');
 		
-		$(document).ready(function () {
+		function darPropiedades() {
 			$('div.drag').draggable({
 				cursor:'pointer',
 				revert:'invalid'
 			});
-			$('div.drop').droppable({
+			$('.drop').droppable({
 				drop: function (event,ui) {
 						var dragObj = ui.draggable[0];
 						var dropObj = this.id;
 						console.log(dragObj.id + ' ' + dropObj);
-
-						// Las comprobaciones se realizan comparando los 'id´s' de los 2 eventos
-						if(dropObj==dragObj.id){
+						if(dropObj==dragObj.id && aciertosObj[dragObj.id]==0){
+							aciertosObj[dragObj.id]++;
 							aciertos++;
+							console.log(aciertosObj);
 							$('#' + dragObj.id).draggable({
 								revert: 'invalid'
 							});
-
-							// La funcion getComputedStyle nos genera un objeto de los atributos css relacionados al objeto
 							var colorDrop = window.getComputedStyle(dragObj,null).getPropertyValue('background-color');
-							console.log(window.getComputedStyle(dragObj,null))
+							
 							correct.play();
 
 							$(this).css('background-color',colorDrop);
@@ -42,7 +47,7 @@
 						}
 					}
  			});
-		});
+		};
 
 
 
@@ -76,6 +81,7 @@
 				}					
 				
 			}
+			darPropiedades();
 		}
 
 		
