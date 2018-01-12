@@ -56,17 +56,9 @@
 
 	h1 {
 		color: white;
-		position:absolute;
-		top: 5%;
-	    left: 0;
-	    right: 0;
-	    margin: 0 auto;
-	    color: #C42929;
+		font-size: 250%;
 	    font-family: sans-serif;
-		-webkit-animation-name: animacion;
-		        animation-name: animacion;
-		-webkit-animation-duration: 1s;
-		        animation-duration: 1s;
+		
 	}
 
 	
@@ -255,22 +247,6 @@
 	}
 
 	
-
-	@keyframes animacion {
-		0% {
-			-webkit-transform: scale(1,1);
-			        transform: scale(1,1);
-		}
-
-		95% {
-			-webkit-transform: scale(2,2);
-			        transform: scale(2,2);
-		}
-		
-		100% {
-			padding: 0px 0;
-		}
-	}
 
 	@-webkit-keyframes ganador {
 
