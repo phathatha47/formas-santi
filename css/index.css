@@ -10,8 +10,6 @@
 	-Estados: Resultado
 	-Keyframes
 	-Media rules
-
-
 	
 	Nota: los prefijos css han sido generados con un plugin Sublime Text Autoprefix css
 
@@ -92,7 +90,8 @@
 	#drag #circ {
 		padding: 50%;
 		border:0px solid blue;
-		border-radius: 100%;
+		-webkit-border-radius: 100%;
+		        border-radius: 100%;
 		background: blue;
 	}
 
@@ -110,8 +109,10 @@
 		border:0px solid;
 		background: orange;
 		padding: 50%;
-		border-top-left-radius: 50%;
-		border-bottom-right-radius: 50%;
+		-webkit-border-top-left-radius: 50%;
+		        border-top-left-radius: 50%;
+		-webkit-border-bottom-right-radius: 50%;
+		        border-bottom-right-radius: 50%;
 	}
 
 
@@ -135,7 +136,8 @@
 	#drop #circ {
 		padding: 55%;
 		border:1px solid blue;
-		border-radius: 100%;
+		-webkit-border-radius: 100%;
+		        border-radius: 100%;
 	}
 
 	#drop #semic {
@@ -149,8 +151,10 @@
 
 	#drop #gorro {
 		padding: 55%;
-		border-top-left-radius: 50%;
-		border-bottom-right-radius: 50%;
+		-webkit-border-top-left-radius: 50%;
+		        border-top-left-radius: 50%;
+		-webkit-border-bottom-right-radius: 50%;
+		        border-bottom-right-radius: 50%;
 		border:1px solid orange;
 	}
 
@@ -168,9 +172,12 @@
 
 	#reintento img {
 		width: 55%;
-		animation-name: ganador;
-		animation-duration: 1s;
-		animation-delay: 200ms;
+		-webkit-animation-name: ganador;
+		        animation-name: ganador;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
+		-webkit-animation-delay: 200ms;
+		        animation-delay: 200ms;
 	}
 
 
@@ -231,13 +238,15 @@
 
 	
 
-	@keyframes animacion {
+	@-webkit-keyframes animacion {
 		0% {
-			transform: scale(1,1);
+			-webkit-transform: scale(1,1);
+			        transform: scale(1,1);
 		}
 
 		95% {
-			transform: scale(2,2);
+			-webkit-transform: scale(2,2);
+			        transform: scale(2,2);
 		}
 		
 		100% {
@@ -245,26 +254,75 @@
 		}
 	}
 
-	@keyframes ganador {
+	
+
+	@keyframes animacion {
+		0% {
+			-webkit-transform: scale(1,1);
+			        transform: scale(1,1);
+		}
+
+		95% {
+			-webkit-transform: scale(2,2);
+			        transform: scale(2,2);
+		}
+		
+		100% {
+			padding: 0px 0;
+		}
+	}
+
+	@-webkit-keyframes ganador {
 
 		0% {
-			transform: rotate(0deg) scale(1,1);
+			-webkit-transform: rotate(0deg) scale(1,1);
+			        transform: rotate(0deg) scale(1,1);
 		}
 
 		25% {
-			transform: rotate(-60deg) scale(2,2);
+			-webkit-transform: rotate(-60deg) scale(2,2);
+			        transform: rotate(-60deg) scale(2,2);
 		}
 
 		
 
 		50% {
-			transform: rotate(60deg) scale(2,2);
+			-webkit-transform: rotate(60deg) scale(2,2);
+			        transform: rotate(60deg) scale(2,2);
 		}
 
 
 
 		100% {
-			transform: rotate(0deg) scale(1,1);
+			-webkit-transform: rotate(0deg) scale(1,1);
+			        transform: rotate(0deg) scale(1,1);
+		}
+	}
+
+	@keyframes ganador {
+
+		0% {
+			-webkit-transform: rotate(0deg) scale(1,1);
+			        transform: rotate(0deg) scale(1,1);
+		}
+
+		25% {
+			-webkit-transform: rotate(-60deg) scale(2,2);
+			        transform: rotate(-60deg) scale(2,2);
+		}
+
+		
+
+		50% {
+			-webkit-transform: rotate(60deg) scale(2,2);
+			        transform: rotate(60deg) scale(2,2);
+		}
+
+
+
+		100% {
+			-webkit-transform: rotate(0deg) scale(1,1);
+			        transform: rotate(0deg) scale(1,1);
 		}
 	}
 

@@ -73,7 +73,6 @@
 			};
 
 			for(valor in tipos) {
-				console.log(tipos[valor])
 				var desorden = tipos[valor].sort(function() {return Math.random() - 0.5});
 
 				for (var i = 0; i < desorden.length; i++) {
